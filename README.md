@@ -1,16 +1,11 @@
 # Ech0 - 开源、自托管、专注思想流动的轻量级发布平台
 
-<p align="center">
-  <img alt="Ech0" src="./docs/imgs/FluentEmojiClipboard.svg" width="320">
-</p>
+
 
 Ech0 是一款专为轻量级分享而设计的开源自托管平台，支持快速发布与分享你的想法、文字与链接。简单直观的操作界面，轻松管理你的内容，让分享变得更加自由，确保数据完全掌控，随时随地与世界连接。
 
-![界面预览](./docs/imgs/screenshot.png)
+![screenshot](https://github.com/user-attachments/assets/0c2d36eb-114d-426c-beaa-690d92a5b2cd)
 
-[预览地址](https://soopy.cn/)
-
----
 
 ## 核心优势
 
@@ -22,7 +17,7 @@ Ech0 是一款专为轻量级分享而设计的开源自托管平台，支持快
 🌍 **跨端适配**：完美兼容桌面/移动浏览器  
 
 > 📍 首次使用注册的账号会被设置为管理员（目前仅管理员支持发布内容）  
-> 🎈 数据存储在/opt/ech0/data下  
+> 🎈 数据存储data下  
 
 
 # ❓ 常见问题
