@@ -1,0 +1,34 @@
+{
+  "name": "Ech0",
+  "package": "cloud.lazycat.app.ech0",
+  "description": "开源、自托管、专注思想流动的轻量级发布平台",
+  "homepage": "https://github.com/lin-snow/Ech0",
+  "author": "lin-snow",
+  "app_features": [
+    "background_task",
+    "public_path"
+  ],
+  "subdomain": "lin-snow",
+  "version": "3.4.4",
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "ech0_1314_1314": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_sn0wl1n_ech0_v3.4.4": {
+    "originalImage": "sn0wl1n/ech0:v3.4.4",
+    "pushTarget": "none"
+  },
+  "ech0_volume_/app/data_action": "emptyDir",
+  "ech0_volume_/app/data_location": "app_data",
+  "public_paths": [
+    "/"
+  ]
+}
