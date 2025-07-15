@@ -1,23 +1,23 @@
 lzc-sdk-version: "0.1"
 name: Ech0
 package: cloud.lazycat.app.ech0
-version: 3.4.4
+version: 2.2.8
+min_os_version: 1.3.8
 description: 开源、自托管、专注思想流动的轻量级发布平台
 homepage: https://github.com/lin-snow/Ech0
 author: lin-snow
 application:
-  subdomain: lin-snow
-  background_task: true
-  multi_instance: false
-  gpu_accel: false
-  kvm_accel: false
-  usb_accel: false
-  public_path:
-    - /
-  routes:
-    - /=http://ech0:1314/
+    subdomain: lin-snow
+    background_task: true
+    public_path:
+        - /
+    routes:
+        - /=http://ech0:6277/
 services:
-  ech0:
-    image: docker.hlmirror.com/sn0wl1n/ech0:v3.4.4
-    binds:
-      - /lzcapp/var/data:/app/data
+    ech0:
+        #sn0wl1n/ech0:v2.2.8
+        image: registry.lazycat.cloud/czyt/sn0wl1n/ech0:f5c064f6e241ca91
+        binds:
+            - /lzcapp/var/data:/app/data
+        environment:
+            - JWT_SECRET={{stable_secret "ech0#jwt" | substr 0 32}}
