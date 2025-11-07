@@ -1,9 +1,8 @@
-lzc-sdk-version: "0.1"
 name: Ech0
 package: cloud.lazycat.app.ech0-ng
-version: 2.2.8
+version: 2.9.6
 min_os_version: 1.3.8
-description: 开源、自托管、专注思想流动的轻量级发布平台
+description: 面向个人的新一代开源、自托管、专注思想流动的轻量级联邦发布平台
 homepage: https://github.com/lin-snow/Ech0
 author: lin-snow
 application:
@@ -11,13 +10,24 @@ application:
   background_task: true
   public_path:
     - /
-  routes:
-    - /=http://ech0:6277/
+
+  upstreams:
+    - location: /
+      backend: http://ech0:6277/
+
 services:
   ech0:
-    #sn0wl1n/ech0:v2.2.8
-    image: registry.lazycat.cloud/czyt/sn0wl1n/ech0:f5c064f6e241ca91
+    #sn0wl1n/ech0:v2.9.6
+    image: registry.lazycat.cloud/czyt/sn0wl1n/ech0:27d67b13b78ef232
     binds:
       - /lzcapp/var/data:/app/data
     environment:
       - JWT_SECRET={{stable_secret "ech0#jwt" | substr 0 32}}
+
+locales:
+  zh:
+    name: "Ech0"
+    description: "面向个人的新一代开源、自托管、专注思想流动的轻量级联邦发布平台"
+  en:
+    name: "Ech0"
+    description: "A new generation of open-source, self-hosted, lightweight federated publishing platform for individuals, focused on the flow of ideas."
