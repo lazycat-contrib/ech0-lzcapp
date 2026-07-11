@@ -3,15 +3,14 @@ application:
   background_task: true
   public_path:
     - /
-
   upstreams:
     - location: /
       backend: http://ech0:6277/
-
 services:
   ech0:
     #sn0wl1n/ech0:v2.9.6
-    image: registry.lazycat.cloud/czyt/sn0wl1n/ech0:27d67b13b78ef232
+    # upstream: docker.io/sn0wl1n/ech0:v5.4.2
+    image: registry.lazycat.cloud/czyt/sn0wl1n/ech0:c08c88b994994ec3
     binds:
       - /lzcapp/var/data:/app/data
     environment:
