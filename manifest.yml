@@ -1,10 +1,3 @@
-name: Ech0
-package: cloud.lazycat.app.ech0-ng
-version: 2.9.6
-min_os_version: 1.3.8
-description: 面向个人的新一代开源、自托管、专注思想流动的轻量级联邦发布平台
-homepage: https://github.com/lin-snow/Ech0
-author: lin-snow
 application:
   subdomain: ech0-ng
   background_task: true
@@ -23,11 +16,3 @@ services:
       - /lzcapp/var/data:/app/data
     environment:
       - JWT_SECRET={{stable_secret "ech0#jwt" | substr 0 32}}
-
-locales:
-  zh:
-    name: "Ech0"
-    description: "面向个人的新一代开源、自托管、专注思想流动的轻量级联邦发布平台"
-  en:
-    name: "Ech0"
-    description: "A new generation of open-source, self-hosted, lightweight federated publishing platform for individuals, focused on the flow of ideas."

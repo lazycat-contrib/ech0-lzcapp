@@ -1,0 +1,39 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/ech0.lpk
+
+update:
+  strategy: publish
+  version_source:
+    type: image
+    image: ech0
+
+build:
+  run_buildscript: false
+
+images:
+  - id: ech0
+    target: service
+    service: ech0
+    source: docker.io/sn0wl1n/ech0
+    channel: stable
+    tag_regex: '^v?\d+\.\d+\.\d+$'
+    version_regex: '^v?(?P<version>\d+\.\d+\.\d+)$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    create_if_missing: false
+    changelog_locales: [zh, en]
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Ech0
+    summary: Published from GitHub Actions
