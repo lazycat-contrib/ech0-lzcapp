@@ -1,6 +1,6 @@
 package: cloud.lazycat.app.ech0-ng
 license: AGPL-3.0
-version: 5.8.0
+version: 5.8.2
 name: Ech0
 description: 面向个人的新一代开源、自托管、专注思想流动的轻量级联邦发布平台
 min_os_version: 1.5.0
