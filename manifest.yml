@@ -9,8 +9,8 @@ application:
 services:
   ech0:
     #sn0wl1n/ech0:v2.9.6
-    # upstream: docker.io/sn0wl1n/ech0:v5.9.10
-    image: registry.lazycat.cloud/czyt/sn0wl1n/ech0:20640981d20c8498
+    # upstream: docker.io/sn0wl1n/ech0:v6.0.0
+    image: registry.lazycat.cloud/czyt/sn0wl1n/ech0:5d7efa68f574183e
     binds:
       - /lzcapp/var/data:/app/data
     environment:
